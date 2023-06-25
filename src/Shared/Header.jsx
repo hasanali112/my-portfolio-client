@@ -21,8 +21,8 @@ const Header = () => {
   }, []);
 
   return (
-    <div className={`navbar text-white site-navbar mb-5 site-navbar-target ${
-      scrolled ? 'scrolled bg-gray-800' : ''}`}>
+    <div className={`navbar  text-white site-navbar  site-navbar-target ${
+      scrolled ? ' bg-gray-800' : ''}`}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -64,7 +64,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <a className="font-bold ml-14  text-xl">My Creative Journey</a>
+        <a className="font-bold md:ml-14  text-xl">My Creative Journey</a>
       </div>
       <div className="navbar-center navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1">

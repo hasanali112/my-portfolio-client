@@ -6,7 +6,7 @@ const Banner = () => {
     <div className="banner md:bg-fixed">
       <div className="bg-black bg-opacity-50 md:p-60">
         <div className="text-center">
-          <h1 className="md:text-4xl text-2xl pt-20 font-bold text-white">
+          <h1 className="md:text-4xl text-2xl md:pt-5 pt-32 font-bold text-white">
             Welcome To  My Creative Journey
           </h1>
           <p className="md:text-xl  text-base font-normal text-white mt-4 mb-5">
