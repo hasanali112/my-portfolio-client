@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './Header.css'
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -69,6 +70,7 @@ const Header = () => {
       <div className="navbar-center navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li><a>Home</a></li>
+          <li><Link to='/about'>About</Link></li>
          <li><a>Blog</a></li>
          <li><a>Login</a></li>
 
