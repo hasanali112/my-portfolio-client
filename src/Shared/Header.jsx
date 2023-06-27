@@ -72,6 +72,7 @@ const Header = () => {
           <li><a>Home</a></li>
           <li><Link to='/about'>About</Link></li>
          <li><a>Blog</a></li>
+         <li><Link to='/dashboard'>Dashboard</Link></li>
          <li><a>Login</a></li>
 
         </ul>

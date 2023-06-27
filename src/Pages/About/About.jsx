@@ -44,7 +44,6 @@ const About = () => {
           <Link to='/'><button className="btn btn-sm btn-outline rounded-none btn-neutral"><FaHome/> Home</button></Link> 
           </div>
         </ul>
-  
   </div>
 </div>
   );
