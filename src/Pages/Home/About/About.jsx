@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { FaCheck } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 const About = () => {
   useEffect(() => {
     AOS.init();
@@ -61,6 +62,9 @@ const About = () => {
               <FaCheck style={{ color: "green" }} className="mr-3" /> MongoDB
             </p>
           </div>
+         <Link to='/about'> <button  data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="2000" className="btn  btn-sm bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border-0 text-white rounded-none px-8 mt-6">Detail</button></Link>
         </div>
       </div>
     </div>

@@ -4,6 +4,8 @@ import "@fontsource/roboto";
 import "@fontsource/roboto/400.css"; 
 import './About.css'
 import { Link } from "react-router-dom";
+import Detail from "./Detail/Detail";
+import { FaDownload, FaHome } from "react-icons/fa";
 
 
 
@@ -13,7 +15,8 @@ const About = () => {
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
   <div className="drawer-content">
     {/* Page content here */}
-    <label htmlFor="my-drawer-2" className="btn btn-xs btn-outline btn-primary drawer-button lg:hidden">View Profile</label>
+    <Detail></Detail>
+    <label htmlFor="my-drawer-2" className="btn btn-xs btn-outline btn-primary drawer-button lg:hidden mb-20 ml-32">View Profile</label>
   
   </div> 
   <div className="drawer-side">
@@ -36,7 +39,10 @@ const About = () => {
           <li>GitHub:</li>
           <a className="text-purple-600" href="https://github.com/hasanali112" target="_blank">hasanali112</a>
           </div>
-          <Link to='/'><button className="btn btn-outline rounded-none btn-primary btn-wide md:mt-36 mt-40">Back to Home</button></Link> 
+          <div className="grid grid-cols-2 gap-3 ml-4 mt-6">
+          <button className="btn btn-sm btn-outline rounded-none bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border-0 text-white "><FaDownload/> Resume</button>
+          <Link to='/'><button className="btn btn-sm btn-outline rounded-none btn-neutral"><FaHome/> Home</button></Link> 
+          </div>
         </ul>
   
   </div>

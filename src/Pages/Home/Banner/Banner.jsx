@@ -13,7 +13,7 @@ const Banner = () => {
             Bringing Ideas to Life. Navigate Through My Portfolio of Innovative
             Creations. Discover My Journey and Works
           </p>
-          <button className="btn  btn-active btn-success rounded-none mr-3 mb-3">Explore Now</button>
+          <button className="btn  btn-active bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border-0 text-white rounded-none mr-3 mb-3">Download Reaume</button>
           <button className="btn btn-active btn-neutral rounded-none">Learn More</button>
         </div>
       </div>
