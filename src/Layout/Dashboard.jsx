@@ -1,6 +1,6 @@
 import React from 'react';
 import DashboardBanner from '../Pages/Dashboard/DashboardBanner/DashboardBanner';
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import {  NavLink, Outlet, useLocation } from 'react-router-dom';
 import '../Layout/Dashboard.css'
 import { FaBloggerB, FaChalkboardTeacher, FaHome, FaRegCalendarAlt} from "react-icons/fa";
 import userImg from '../assets/unnamed.jpg'
@@ -28,11 +28,11 @@ const Dashboard = () => {
            <img src={userImg} alt=""  className="rounded-full w-28  ml-10 mt-3"/>
       </li>
       <li className="text-white  title text-base ml-6">MD HASAN ALI KHAN</li>
-      <li className='text-white ml-2 title text-base mt-16'><Link to='/dashboard'><FaChalkboardTeacher/>Admin Dashboard</Link></li>
-      <li className='text-white ml-2 title text-base mt-3'><Link to='/dashboard/addproject'><FaRegCalendarAlt/>Add Project</Link></li>
-      <li className='text-white ml-2 title text-base mt-3 mb-3'><Link to='/dashboard/addblog'><FaBloggerB/>Add blog</Link></li>
+      <li><NavLink className='text-white hover:text-white ml-2 title text-base mt-16' to='/dashboard'><FaChalkboardTeacher/>Admin Dashboard</NavLink></li>
+      <li><NavLink className='text-white hover:text-white ml-2 title text-base mt-3' to='/dashboard/addproject'><FaRegCalendarAlt/>Add Project</NavLink></li>
+      <li ><NavLink className='text-white hover:text-white ml-2 title text-base mt-3 mb-3' to='/dashboard/addblog'><FaBloggerB/>Add blog</NavLink></li>
       <hr />
-      <li className='text-white ml-2 title text-base mt-3'><Link to='/'><FaHome/> Home</Link></li>
+      <li><NavLink className='text-white hover:text-white  ml-2 title text-base mt-3' to='/'><FaHome/> Home</NavLink></li>
     </ul>
   
   </div>
