@@ -13,9 +13,9 @@ const About = () => {
       data-aos="fade-up"
       data-aos-easing="linear"
       data-aos-duration="1500"
-      className="mt-28 mb-20"
+      className="pt-36 mb-20"
     >
-      <h1 className="text-center md:text-5xl text-3xl font-bold">
+      <h1 className="text-center text-white md:text-5xl text-3xl font-bold">
         About My Creative Journey
       </h1>
 
@@ -37,7 +37,7 @@ const About = () => {
           data-aos-easing="linear"
           data-aos-duration="2500"
         >
-          <h3 className="text-xl text-gray-500 font-bold">
+          <h3 className="text-xl text-white font-bold">
             I am MERN stack developer.Being a MERN stack developer, I have a
             powerful and versatile set of tools at your disposal for building
             full-stack web applications I am proficient in using four key
@@ -47,7 +47,7 @@ const About = () => {
             data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-duration="2500"
-            className="grid grid-cols-1"
+            className="grid grid-cols-1 text-white"
           >
             <p className="mt-4 font-semibold inline-flex items-center">
               <FaCheck style={{ color: "green" }} className="mr-3" /> React.js
@@ -62,7 +62,8 @@ const About = () => {
               <FaCheck style={{ color: "green" }} className="mr-3" /> MongoDB
             </p>
           </div>
-         <Link to='/about'> <button  data-aos="fade-up"
+         <Link to='/about'> <button  
+            data-aos="fade-up"
             data-aos-easing="linear"
             data-aos-duration="2000" className="btn  btn-sm bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border-0 text-white rounded-none px-8 mt-6">Detail</button></Link>
         </div>

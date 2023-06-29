@@ -7,6 +7,7 @@ import About from "../Pages/About/About";
 import Dashboard from "../Layout/Dashboard";
 import AddProject from "../Pages/Dashboard/AddProject/AddProject";
 import AddBlog from "../Pages/Dashboard/AddBlog/AddBlog";
+import PortfolioDetail from "../Pages/PortfolioDetail/PortfolioDetail";
 
  export const router = createBrowserRouter([
     {
@@ -20,6 +21,11 @@ import AddBlog from "../Pages/Dashboard/AddBlog/AddBlog";
         {
           path:'about',
           element:<About></About>
+        },
+        {
+          path:'detail/:id',
+          element:<PortfolioDetail></PortfolioDetail>,
+          loader:({params})=> fetch(`http://localhost:5000/allprojects/${params.id}`)
         }
       ]
     },

@@ -40,8 +40,8 @@ const AddProject = () => {
             <h1 className="text-5xl font-bold">Add Project</h1>
           </div>
           <form  onSubmit={handleSubmit(onSubmit)}>
-            <div className="card-body ">
-               <div className="grid grid-cols-2 gap-7">
+            <div className="card-body w-[700px]">
+               <div className="grid grid-cols-2 gap-3">
                <div className="form-control">
                 <label className="label">
                   <span className="label-text">Website Main Image</span>

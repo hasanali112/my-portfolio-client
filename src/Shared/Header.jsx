@@ -7,7 +7,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 400) {
+      if (window.scrollY >0) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -65,14 +65,14 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <a className="font-bold md:ml-14  text-xl">My Creative Journey</a>
+       <Link to='/'> <a className="font-bold md:ml-14  text-xl">My Creative Journey</a></Link>
       </div>
       <div className="navbar-center navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li><a>Home</a></li>
-          <li><Link to='/about'>About</Link></li>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link className="hover:bg-blue-500 hover:text-white" to='/about'>About</Link></li>
          <li><a>Blog</a></li>
-         <li><Link to='/dashboard'>Dashboard</Link></li>
+         <li><Link className="hover:bg-blue-500 hover:text-white"  to='/dashboard'>Dashboard</Link></li>
          <li><a>Login</a></li>
 
         </ul>
