@@ -25,7 +25,7 @@ import PortfolioDetail from "../Pages/PortfolioDetail/PortfolioDetail";
         {
           path:'detail/:id',
           element:<PortfolioDetail></PortfolioDetail>,
-          loader:({params})=> fetch(`http://localhost:5000/allprojects/${params.id}`)
+          loader:({params})=> fetch(`https://my-portfolio-server-iota-ebon.vercel.app/allprojects/${params.id}`)
         }
       ]
     },

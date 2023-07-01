@@ -1,0 +1,9 @@
+.work input::placeholder {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .ready {
+    font-family: 'Roboto', sans-serif;
+  }
+  

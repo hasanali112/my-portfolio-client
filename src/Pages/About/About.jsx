@@ -6,12 +6,27 @@ import './About.css'
 import { Link } from "react-router-dom";
 import Detail from "./Detail/Detail";
 import { FaDownload, FaHome } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 
 
 const About = () => {
+
+  
+  const downloadPDF = () => {
+    const link = document.createElement('a');
+    link.href = '../../../public/Hasan Resume.pdf';
+    link.download = 'filename.pdf';
+    link.dispatchEvent(new MouseEvent('click'));
+  };
+
+  
   return (
-    <div className="drawer lg:drawer-open">
+     <div>
+      <Helmet>
+        <title>About | My Creative Journey</title>
+      </Helmet>
+        <div className="drawer lg:drawer-open">
   <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
   <div className="drawer-content">
     {/* Page content here */}
@@ -21,7 +36,7 @@ const About = () => {
   </div> 
   <div className="drawer-side">
     <label htmlFor="my-drawer-2" className="drawer-overlay"></label> 
-    <ul className="menu p-4 md:w-72 w-72 h-full bg-gray-200 text-base-content">
+    <ul className="menu p-4 md:w-72 w-72 h-full text-white bg-[#2E2252] ">
           {/* Sidebar content here */}
           <li>
            <img src={aboutImg} alt=""  className="rounded-full w-44  ml-10"/>
@@ -33,19 +48,20 @@ const About = () => {
           <li className="abouts text-base  text-left ml-4">Address: Rajshahi, Bangladesh</li>
           <div className="abouts flex  text-base space-x-3 items-center ml-4">
           <li>LinkdIn:</li>
-          <a className="text-purple-600" href="https://www.linkedin.com/in/md-hasan-ali-khan/" target="_blank">MD Hasan Ali Khan</a>
+          <a className="text-green-400" href="https://www.linkedin.com/in/md-hasan-ali-khan/" target="_blank">MD Hasan Ali Khan</a>
           </div>
           <div className="abouts flex  text-base space-x-3 items-center ml-4">
           <li>GitHub:</li>
-          <a className="text-purple-600" href="https://github.com/hasanali112" target="_blank">hasanali112</a>
+          <a className="text-green-400" href="https://github.com/hasanali112" target="_blank">hasanali112</a>
           </div>
           <div className="grid grid-cols-2 gap-3 ml-4 mt-6">
-          <button className="btn btn-sm btn-outline rounded-none bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border-0 text-white "><FaDownload/> Resume</button>
-          <Link to='/'><button className="btn btn-sm btn-outline rounded-none btn-neutral"><FaHome/> Home</button></Link> 
+          <button onClick={downloadPDF} className="btn btn-sm btn-outline rounded-none bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border-0 text-white "><FaDownload/> Resume</button>
+          <Link to='/'><button className="btn btn-sm  rounded-none btn-neutral"><FaHome/> Home</button></Link> 
           </div>
         </ul>
   </div>
 </div>
+     </div>
   );
 };
 

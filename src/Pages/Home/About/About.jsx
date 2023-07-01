@@ -9,21 +9,19 @@ const About = () => {
   }, []);
 
   return (
-    <div
-      data-aos="fade-up"
-      data-aos-easing="linear"
-      data-aos-duration="1500"
-      className="pt-36 mb-20"
-    >
-      <h1 className="text-center text-white md:text-5xl text-3xl font-bold">
+    <div className="pt-16">
+      <h1
+        data-aos="zoom-in-down"
+        className="text-center text-white md:text-4xl text-3xl font-bold"
+      >
         About My Creative Journey
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 space-x-4 md:mx-16 mt-16">
         <div
-          data-aos="fade-up"
-          data-aos-easing="linear"
-          data-aos-duration="2000"
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
         >
           <img
             src="https://images.unsplash.com/photo-1545670723-196ed0954986?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=873&q=80"
@@ -33,9 +31,9 @@ const About = () => {
         </div>
 
         <div
-          data-aos="fade-up"
-          data-aos-easing="linear"
-          data-aos-duration="2500"
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-easing="ease-in-sine"
         >
           <h3 className="text-xl text-white font-bold">
             I am MERN stack developer.Being a MERN stack developer, I have a
@@ -43,12 +41,7 @@ const About = () => {
             full-stack web applications I am proficient in using four key
             technologies:
           </h3>
-          <div
-            data-aos="fade-up"
-            data-aos-easing="linear"
-            data-aos-duration="2500"
-            className="grid grid-cols-1 text-white"
-          >
+          <div className="grid grid-cols-1 text-white">
             <p className="mt-4 font-semibold inline-flex items-center">
               <FaCheck style={{ color: "green" }} className="mr-3" /> React.js
             </p>
@@ -62,10 +55,11 @@ const About = () => {
               <FaCheck style={{ color: "green" }} className="mr-3" /> MongoDB
             </p>
           </div>
-         <Link to='/about'> <button  
-            data-aos="fade-up"
-            data-aos-easing="linear"
-            data-aos-duration="2000" className="btn  btn-sm bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border-0 text-white rounded-none px-8 mt-6">Detail</button></Link>
+          <Link to="/about">
+            <button className="btn  btn-sm bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border-0 text-white rounded-none px-8 mt-6">
+              Detail
+            </button>
+          </Link>
         </div>
       </div>
     </div>

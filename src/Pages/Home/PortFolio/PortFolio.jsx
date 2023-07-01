@@ -2,22 +2,31 @@ import React, { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import "./Portfolio.css";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const PortFolio = () => {
   const [projectData, setProjectData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allprojects")
+    fetch("https://my-portfolio-server-iota-ebon.vercel.app/allprojects")
       .then((res) => res.json())
       .then((data) => setProjectData(data));
   }, []);
 
   const recentWork = projectData.filter(rw=> rw.status === 'recent')
 
+  
+    useEffect(()=>{
+      AOS.init();
+    },[])
+  
+
   return (
     <div className="mt-32 pb-20">
-      <h1 className="text-4xl text-center text-white font-bold">My Recent Work</h1>
-      <div className="mb-20 mt-20 md:mx-24 mx-4 grid grid-cols-1 md:grid-cols-3 md:gap-1 gap-10">
+      <h1 data-aos="zoom-in-up" className="text-4xl text-center text-white font-bold">My Recent Work</h1>
+      <div data-aos="zoom-in" className="mb-20 mt-20 md:mx-24 mx-4 grid grid-cols-1 md:grid-cols-3 md:gap-1 gap-10">
         {recentWork.slice(0, 3).map((pd) => (
           <div
             key={pd._id}

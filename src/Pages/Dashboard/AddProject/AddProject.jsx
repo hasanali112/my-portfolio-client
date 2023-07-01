@@ -17,7 +17,7 @@ const AddProject = () => {
       liveSite: data.link,
       description: data.description
     }
-    fetch('http://localhost:5000/projects',{
+    fetch('https://my-portfolio-server-iota-ebon.vercel.app/projects',{
       method:'POST',
       headers:{
         'content-type':'application/json'
