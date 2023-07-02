@@ -1,0 +1,11 @@
+#tsparticle {
+    height: 100vh;
+  }
+
+
+  @media (max-width:576px){
+    #tsparticle {
+        height: 140vh;
+      }
+    
+  }

@@ -8,6 +8,8 @@ import Dashboard from "../Layout/Dashboard";
 import AddProject from "../Pages/Dashboard/AddProject/AddProject";
 import AddBlog from "../Pages/Dashboard/AddBlog/AddBlog";
 import PortfolioDetail from "../Pages/PortfolioDetail/PortfolioDetail";
+import Blog from "../Pages/Blog/Blog";
+import WorkDetail from "../Pages/WorkDetail/WorkDetail";
 
  export const router = createBrowserRouter([
     {
@@ -26,6 +28,14 @@ import PortfolioDetail from "../Pages/PortfolioDetail/PortfolioDetail";
           path:'detail/:id',
           element:<PortfolioDetail></PortfolioDetail>,
           loader:({params})=> fetch(`https://my-portfolio-server-iota-ebon.vercel.app/allprojects/${params.id}`)
+        },
+        {
+          path:'/blogs',
+          element:<Blog></Blog>
+        },
+        {
+          path:'/portfolio',
+          element:<WorkDetail></WorkDetail>
         }
       ]
     },
